@@ -1,0 +1,30 @@
+Main macros and files useable as they are:
+- Lamda_c polarisation analysis.ipynb
+jupyter notebook (python 3)
+-- Generation of small samples of events (using both 8 and 20 parameters)
+-- Analysis of generated events using plots
+
+- IntegrateF_x_i.Cxx
+Compute an integrated value of analytical f_x_i, the differents terms of the distribution separated according to the 20 final parameters 
+
+- FitParametersFromEvents.C (string eventRepertory)
+Do a 8 parameters (A,B,C,D,A1,...B2) fit on events in eventRepertory
+/!\ Has written in hard the value of the integer value of f_x_i which is used in computation /!\
+(analytical integration of the differents terms of the distribution separated according to the 20 final parameters (A2,B2,...ReB2A)
+Output
+- Fit result in output (value of L, parameters values etc) /!\ Not saved outside /!\
+- covariance and correlation which are save in "covariance.csv" and "correlation.csv"
+
+- FitParametersFromEvents20param.C (string eventRepertory)
+Same but with the 20 final parameters, based on previous macro
+
+-parameters.txt 
+Save file with the values of fit A,B,C,...,B2 for event generation
+-constant.h
+Definition of the diverse constants used in program (mass and width)
+
+- pythonConverter.C
+Converts a python mathematical expression in "PythonExpr.txt" to a C++ expression in "CppExpr.txt"
+
+-generateEvents.C (int nb, double xi)
+Generates nb events with a xi parameters, according to fit parameters in "parameters.txt"
