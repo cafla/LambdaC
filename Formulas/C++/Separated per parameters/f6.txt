@@ -1,0 +1,1 @@
+(2*pow(mLamC,3)*(eprot + mp)*pow(-2*epi*(pow(eprot,2) - pow(mKst,2) - 2*eprot*mLamC + pow(mLamC,2)) + (eprot - mLamC)*(pow(mKst,2) - s23) + 2*kkk*(eprot - mLamC)*ppp*cos(psi),2))/pow(mKst,4)
